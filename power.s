@@ -1,4 +1,3 @@
-message: .asciz "ASSIGNMENT 1: Powers\nTeam 139:\nDiogo Piteira Castelos - NetID: dcastelos\nFilip Angheluta - NetID: fangheluta\n\n"
 prompt1: .asciz "Let's calculate powers!\nEnter non-negative base: "
 prompt2: .asciz "Enter non-negative exponent: "
 input: .asciz "%ld"
@@ -11,11 +10,6 @@ main:
 	# prologue
 	pushq %rbp # push the base pointer
 	movq %rsp , %rbp # copy stack pointer value to base pointer
-
-	#print out student details
-	movq $0 , %rax # no vector registers in use for printf
-	movq $message , %rdi # first parameter: the message string
-	call printf # call printf to print message
 
 	#print out first prompt
 	movq $0 , %rax # no vector registers in use for printf
